@@ -1,5 +1,5 @@
 def main():
-    print("Welcome to My Computer Quiz!")
+    print("\"Welcome to My Computer Quiz!\"")
 
     playing = input("Do you want to play? ").lower()
 
@@ -8,12 +8,12 @@ def main():
 
     print("Okay! Lets play :)")
     questions = ["CPU","E-mail","WWW","GPU", "RAM", "ROM", "PC", "OS", "DOC", "MS"]
-    answers = ["central processing unit", "electronic mail", "world wide web", 
-    "graphics processing unit", "random access memory", "read only memory", 
-    "personal computer", "operating system", "document", "microsoft"]
+    answers = ["central processing unit", "electronic mail", "world wide web", "graphics processing unit", "random access memory",
+     "read only memory", "personal computer", "operating system", "document", "microsoft"]
 
     number_of_questions = int(input("How many questions do you want to answer (there are 10 queztions)? "))
-    print("You will get 5 points for each correct answer and -2 points for each incorrect answer.")
+    print()
+    print("\"Note: You will get 5 points for each correct answer and -2 points for each incorrect answer.\"")
     total_score = 0
     correct_count = 0
     incorrect_count = 0
@@ -31,10 +31,10 @@ def main():
             print("Incorrect! you lost 2 points.")
             incorrect_count += 1
             total_score -= 2
-        print(f"Your current score is {total_score} and you got {correct_count} questions correct.")
+        print(f"Your got {correct_count} correct and {incorrect_count} incorrect.")
 
-    print(f"You got {((total_score/number_of_questions) * 100):.2f}%.")
-    print(f"Your final score {total_score}")
+    print(f"You got {((correct_count/number_of_questions) * 100):.2f}%.")
+    print(f"Your final score \"{total_score}\" points")
 
 if __name__ == "__main__":
     main()
