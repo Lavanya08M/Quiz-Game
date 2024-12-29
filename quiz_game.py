@@ -7,9 +7,19 @@ def main():
         quit()
 
     print("Okay! Lets play :)")
-    questions = ["CPU","E-mail","WWW","GPU", "RAM", "ROM", "PC", "OS", "DOC", "MS"]
-    answers = ["central processing unit", "electronic mail", "world wide web", "graphics processing unit", "random access memory",
-     "read only memory", "personal computer", "operating system", "document", "microsoft"]
+
+    quiz_dict = {
+        "CPU": "central processing unit",
+        "E-mail": "electronic mail",
+        "WWW": "world wide web",
+        "GPU": "graphics processing unit", 
+        "RAM": "random access memory", 
+        "ROM": "read only memory", 
+        "PC": "personal computer", 
+        "OS": "operating system", 
+        "DOC": "document", 
+        "MS": "microsoft"
+    }
 
     number_of_questions = int(input("How many questions do you want to answer (there are 10 queztions)? "))
     print()
