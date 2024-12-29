@@ -22,18 +22,23 @@ def main():
     }
 
     number_of_questions = int(input("How many questions do you want to answer (there are 10 queztions)? "))
-    print()
-    print("\"Note: You will get 5 points for each correct answer and -2 points for each incorrect answer.\"")
+
+    print("\n\"Note: You will get 5 points for each correct answer and -2 points for each incorrect answer.\"\n")
+
     total_score = 0
     correct_count = 0
     incorrect_count = 0
+    ques_no = 1
 
     print(f"Answer {number_of_questions} quiz questions!")
 
-    for ques_no in range(number_of_questions):
-        print(f"Question Number: {ques_no+1}")
-        answer = input(f"What does {questions[ques_no]} stand for: ").lower()
-        if answer == answers[ques_no]:
+ 
+    for ques, ans in quiz_dict.items():
+        if ques_no > number_of_questions:
+            break
+        print(f"Question Number: {ques_no}")
+        answer = input(f"What does {ques} stand for: ").lower()
+        if answer == ans:
             print("Correct! you earned 5 points.")
             correct_count += 1
             total_score += 5
@@ -41,6 +46,7 @@ def main():
             print("Incorrect! you lost 2 points.")
             incorrect_count += 1
             total_score -= 2
+        ques_no += 1
         print(f"Your got {correct_count} correct and {incorrect_count} incorrect.")
 
     print(f"You got {((correct_count/number_of_questions) * 100):.2f}%.")
